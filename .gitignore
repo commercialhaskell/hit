@@ -4,3 +4,4 @@ dist
 Hit
 .cabal-sandbox
 cabal.sandbox.config
+/.stack-work/

@@ -34,7 +34,7 @@ import Data.Git.Storage
 import Data.Git.Storage.Object
 import Data.ByteString.Lazy.Char8 as L
 
-import Data.Algorithm.Patience as AP (Item(..), diff)
+import Patience as AP (Item(..), diff)
 
 -- | represents a blob's content (i.e., the content of a file at a given
 -- reference).

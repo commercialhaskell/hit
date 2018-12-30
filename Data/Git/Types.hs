@@ -5,6 +5,7 @@
 -- Stability   : experimental
 -- Portability : unix
 --
+{-# LANGUAGE CPP #-}
 {-# LANGUAGE DeriveDataTypeable #-}
 module Data.Git.Types
     (
@@ -185,6 +186,10 @@ data Person = Person
 -- | Represent a root tree with zero to many tree entries.
 data Tree = Tree { treeGetEnts :: [TreeEnt] } deriving (Show,Eq)
 
+#if MIN_VERSION_base(4, 12, 0)
+instance Semigroup Tree where
+    (<>) = mappend
+#endif
 instance Monoid Tree where
     mempty                      = Tree []
     mappend (Tree e1) (Tree e2) = Tree (e1 ++ e2)

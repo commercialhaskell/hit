@@ -50,7 +50,7 @@ Library
                    , hourglass >= 0.2
                    , unix-compat
                    , utf8-string
-                   , patience
+                   , patience >= 0.2
   Exposed-modules:   Data.Git
                      Data.Git.FS
                      Data.Git.Monad
