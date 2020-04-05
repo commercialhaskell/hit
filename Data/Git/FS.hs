@@ -228,6 +228,7 @@ instance Applicative CommitM where
 instance Monad CommitM where
     return = returnCommitM
     (>>=)  = bindCommitM
+instance MonadFail CommitM where
     fail   = failCommitM
 
 instance Alternative CommitM where

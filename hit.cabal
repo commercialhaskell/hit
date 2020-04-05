@@ -33,7 +33,7 @@ Flag debug
   Default:           False
 
 Library
-  Build-Depends:     base >= 4 && < 5
+  Build-Depends:     base >= 4.13 && < 5
                    , mtl
                    , bytestring >= 0.9
                    , byteable
